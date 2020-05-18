@@ -1,6 +1,6 @@
 class TodosController < ApplicationController
     def index
-        @todos = Todo.all
+        @todos = Todo.order(priorities: :asc)
     end
     def show
         @todo = Todo.find(params[:id])
